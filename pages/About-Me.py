@@ -1,6 +1,15 @@
 import streamlit as st
 import os
+
 st.set_page_config(page_title="RemyMadeIt | About-Me")
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 with st.container():
     st.title("About Me")
     st.write("As a developer, I specialize in creating engaging, user-friendly websites and applications. My expertise spans HTML, CSS, JavaScript, and various frameworks and libraries. I am passionate about writing clean, efficient code and continually expanding my knowledge to stay on the cutting edge of technology.")

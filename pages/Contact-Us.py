@@ -4,6 +4,15 @@ import numpy as np
 st.set_page_config(page_title="RemyMadeIt | Contact")
 st.title("Contact us")
 
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 import streamlit as st
 import smtplib
 from email.mime.multipart import MIMEMultipart

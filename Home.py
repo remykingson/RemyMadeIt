@@ -2,6 +2,16 @@ import streamlit as st
 import os
 
 st.set_page_config(page_title="RemyMadeIt | Home")
+st.logo(os.path.join(os.getcwd(), "static", "logo.jpg"))
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
 if "step" not in st.session_state:

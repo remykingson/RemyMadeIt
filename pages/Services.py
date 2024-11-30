@@ -1,5 +1,15 @@
 import streamlit as st
 import os
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 st.set_page_config(page_title="RemyMadeIt | Services")
 st.title("Our Services")
 st.write("At [RemyMadeIt company], we are dedicated to providing exceptional services that cater to your unique needs. Based in Kigali, Rwanda, we specialize in a wide range of solutions to help you achieve your goals with efficiency and creativity.")
