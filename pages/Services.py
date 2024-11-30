@@ -20,7 +20,7 @@ with st.container(border= True):
                   st.subheader("Graphic Design!")
                   st.write("We offer you the best graphic design that enhanc user  experience and effectively convey brand messages. Whether it's designing logos, crafting marketing materials, or developing intuitive UI/UX designs, I strive to deliver high-quality work that exceeds expectations.")
             with col2:
-                  tab2, tab1, tab4, tab3 = st.tabs( {"PhotoManipulation", "PostDesign", "Logos", "Branding"})
+                  tab2, tab4, tab1, tab3 = st.tabs( {"PhotoManipulation", "PostDesign", "Logos", "Branding"})
                   with tab1:
                       st.image(os.path.join(os.getcwd(), "static","bro.jpg"))
                   with tab2:
