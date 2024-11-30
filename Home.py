@@ -2,7 +2,6 @@ import streamlit as st
 import os
 
 st.set_page_config(page_title="RemyMadeIt | Home")
-st.logo(os.path.join(os.getcwd(), "static", "logo.jpg"))
 
 hide_st_style = """
             <style>
