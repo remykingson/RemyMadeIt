@@ -25,7 +25,7 @@ def go_to_step2(name):
       st.session_state.info["name"] = name
       st.session_state.step = 2      
 if st.session_state.step == 1:
-      st.title("Welcom To Remy MadeIt's Blog")
+      st.title("Welcom To Remy Made It's Blog")
       st.caption("We gland to see you here!") 
       name = st.text_input("**Enter your Name:**")
       submit = st.button("Submit",key="unique")
@@ -47,14 +47,14 @@ elif st.session_state.step == 2:
                   st.subheader(f"**Welcome**, {st.session_state.info.get("name")}")
       st.divider()
       st.title("Our Services")
-      st.write("Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quo, ducimus error eos excepturi illo rem voluptatum hic! Numquam autem neque similique architecto blanditiis provident ipsam tempore sunt aperiam ratione ut doloribus eaque sit nam ea reiciendis, voluptas voluptatum, officiis mollitia, quia voluptatem temporibus. Necessitatibus laudantium eligendi, facere aperiam laborum nisi dignissimos eveniet, error dolor quod repudiandae nostrum ipsa inventore corporis ea eos veniam quae nobis eius tempora provident iure reiciendis a molestiae. Nulla necessitatibus cupiditate et nisi eligendi voluptas harum, magni quia blanditiis, unde aliquam eum officia similique, accusamus sint? Nulla voluptatum expedita enim, doloribus atque exercitationem vitae ab!")
+      st.write("At [RemyMadeIt company], we are dedicated to providing exceptional services that cater to your unique needs. Based in Kigali, Rwanda, we specialize in a wide range of solutions to help you achieve your goals with efficiency and creativity.")
       with st.container(border= True):
             col1, col2 = st.columns(2)
             with col1:
                   st.subheader("Graphic Design")
                   st.write("We offer you the best graphic design that enhance user  experience and effectively convey brand messages. Whether it's designing logos, crafting marketing materials, or developing intuitive UI/UX designs, I strive to deliver high-quality work that exceeds expectations.")
             with col2:
-                  tab2, tab4, tab1, tab3 = st.tabs( {"PhotoManipulation", "PostDesign", "Logos", "Branding"})
+                  tab2, tab1, tab4, tab3 = st.tabs( {"PhotoManipulation", "PostDesign", "Logos", "Branding"})
                   with tab1:
                       st.image(os.path.join(os.getcwd(), "static","bro.jpg"))
                   with tab2:
