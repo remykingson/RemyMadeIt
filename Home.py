@@ -62,7 +62,7 @@ elif st.session_state.step == 2:
             with col1:
                 st.button("Back", on_click=go_to_step1())
             with col2:
-                  st.subheader(f"**Welcome**   {st.session_state.info.get("name")}")
+                  st.subheader(f"**Welcome** {st.session_state.info.get('name')}")
       st.divider()
       st.title("Our Services")
       st.write("At **RemyMadeIt**, we are dedicated to providing exceptional services that cater to your unique needs. Based in Kigali, Rwanda, we specialize in a wide range of solutions to help you achieve your goals with efficiency and creativity.")
@@ -104,7 +104,7 @@ elif st.session_state.step == 2:
             with col1:
                  st.image(os.path.join(os.getcwd(), "static","me.jpg"))
             with col2:   
-                  st.write("I am Dushimimana Remy, a visionary developer, graphic designer, and the Founder & CEO of RemyMadeIt. With two years of experience in software development and a strong foundation in visual aesthetics, I merge technical expertise with creative innovation to craft impactful digital solutions. My passion for design and technology drives me to create seamless, user-centric experiences that stand out in both functionality and aestuser-centrichetics.")
+                  st.write("I am Dushimimana Remy, a visionary developer, graphic designer, and the Founder & CEO of RemyMadeIt. With two years of experience in software development and a strong foundation in visual aesthetics, I merge technical expertise with creative innovation to craft impactful digital solutions. My passion for design and technology drives me to create seamless, user-centric experiences that stand out in both functionality and aesthetics.")
                   
 css_file = current_dir / "style" / "home.css"
 with open(css_file) as f:
