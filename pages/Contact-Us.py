@@ -1,7 +1,16 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-st.set_page_config(page_title="RemyMadeIt | Contact")
+import streamlit as st
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from datetime import datetime
+from pathlib import Path
+current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
+css_file = current_dir / "style" / "main.css"
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 st.title("Contact us")
 
 hide_st_style = """
@@ -12,11 +21,7 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
-
-import streamlit as st
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
+time = datetime.now()
 
 def send_email(subject, body, to_email):
     from_email = "remydushimimana24@gmail.com"  # replace with your email
@@ -44,14 +49,11 @@ def send_email(subject, body, to_email):
 st.subheader("Get in touch with us here")
 with st.form(key="user_form_info"):
     with st.container():
-        col1, col2 = st.columns(2)
-        with col1:
-            first_name = st.text_input("**Enter your First_name:**")
-        with col2:
-            last_name = st.text_input("**Enter your Last_name:**")
-    email = st.text_input("**Your Email:**")
-    message = st.text_area("**Your message:**")
-    submit = st.form_submit_button(label="Submit")
+        first_name = st.text_input("**your First_name:**")
+        last_name = st.text_input("**your Last_name:**")
+        email = st.text_input("**Your Email:**")
+        message = st.text_area("**Your message:**")
+        submit = st.form_submit_button(label="Submit")
     
     if submit:
         if not first_name or not last_name:
@@ -86,10 +88,10 @@ with st.container():
     with col2:
          st.subheader("You can find us on")
          st.write("**Number**:  " " +250 795 057 383")
-         st.write("**Email**:  " " remydushimimana24@gmail.com")
+         st.write("**Email**:  "  " remydushimimana24@gmail.com")
          st.write("**Street**: " " KN250 / Nyamirambo")
-st.markdown("""
+st.markdown(f"""
 <div style='text-align: center; font-size: small;'>
-    © 2024 All rights reserved by Remy
+    © {time:%Y} RemyMadeIt All rights reserved
 </div>
 """, unsafe_allow_html=True)         
