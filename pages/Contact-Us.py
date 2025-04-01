@@ -30,7 +30,7 @@ def send_email(subject, body, to_email):
     # Create the email headers and body
     msg = MIMEMultipart()
     msg['From'] = from_email
-    msg['To'] = to_email
+    msg['To'] = "remydushimimana24@gmail.com"
     msg['Subject'] = subject
     msg.attach(MIMEText(body, 'plain'))
 
